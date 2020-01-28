@@ -23,7 +23,7 @@ Here you have the user stories we would need:
 You should create an Android app in which we would be able to see the postures (retrieved from a server) and the detail of each posture.
 To retrieve data from a server, you should create your API with the data we provide you.
 
-Don't worry! This is not a Full Stack code challenge ;-) you can use services like https://github.com/typicode/json-server to get quickly a server running from where you can start retrieving data.
+Don't worry! This is not a Full Stack code challenge ;-) you can use services like https://github.com/typicode/json-server to get a server up running quickly. From there you can start retrieving the data.
 
 ### Bonus Points
 
@@ -241,7 +241,6 @@ Here you have some postures in JSON format that you can use for the backend:
 
 The structure of this README has been inspired by:
 https://github.com/luvotels/fs-hiring-test
-
 
 
 
