@@ -2,7 +2,7 @@
 
 Congratulations! You’re nearly there to join our team as Android/iOS developer! 
 
-We have a really big issue in our office and we need you to solve it. We are trying to practice Yoga, but we are not able to remember the different postures, and we need your superpowers as Android developer to provide us a solution for it! 
+We have a really big issue in our office and we need you to solve it. We are trying to practice Yoga, but we are not able to remember the different postures, and we need your superpowers as Android/iOS developer to provide us a solution for it! 
 
 We have prepared a JSON file with the postures we need to remember and practice (if you have more postures for us, we would be happy to be able to try them), just you would have to take a look at it, because we left the ***postures.json*** alone in the office and the Marketing team started touching it, so we are not sure that is a completely valid JSON right now or has some incorrect values over there. The ***postures_detail.json*** does not have to be modified.
 
@@ -241,7 +241,6 @@ Here you have some postures in JSON format that you can use for the backend:
 
 The structure of this README has been inspired by:
 https://github.com/luvotels/fs-hiring-test
-
 
 
 
