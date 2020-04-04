@@ -1,0 +1,5 @@
+rootProject.name='YogaSolo'
+include ':app'
+include ':domain'
+include ':data'
+include ':presentation'
