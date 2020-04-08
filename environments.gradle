@@ -1,0 +1,16 @@
+class Environments {
+    String baseURL = ""
+}
+
+class EnvironmentItems {
+    Environments debug = new Environments()
+    Environments release = new Environments()
+}
+
+EnvironmentItems environments = new EnvironmentItems()
+
+environments.debug.baseURL = "http://localhost:3000/"
+environments.release.baseURL = "http://localhost:3000/"
+
+ext.environments = environments
+
