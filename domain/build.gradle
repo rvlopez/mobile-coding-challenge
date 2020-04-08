@@ -33,6 +33,10 @@ android {
 
 }
 
+configurations {
+    unitTestImplementation.extendsFrom testImplementation
+}
+
 dependencies {
     api "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     api "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
@@ -41,7 +45,9 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoCoreVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoInlineVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+
 }

@@ -15,5 +15,12 @@ ext {
     materialVersion = '1.2.0-alpha05'
     glideVersion = '4.11.0'
     shimmerVersion = '0.5.0'
+    lottieVersion = '2.8.0'
+
+    // Testing
+    junitVersion = '4.13'
+    mockitoKotlinVersion = '2.2.0'
+    mockitoCoreVersion = '3.3.0'
+    mockitoInlineVersion = '3.3.0'
 
 }

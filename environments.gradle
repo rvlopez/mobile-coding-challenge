@@ -9,8 +9,8 @@ class EnvironmentItems {
 
 EnvironmentItems environments = new EnvironmentItems()
 
-environments.debug.baseURL = "http://localhost:3000/"
-environments.release.baseURL = "http://localhost:3000/"
+environments.debug.baseURL = "http://www.mocky.io/v2/"
+environments.release.baseURL = "http://127.0.0.1:3000/"
 
 ext.environments = environments
 
