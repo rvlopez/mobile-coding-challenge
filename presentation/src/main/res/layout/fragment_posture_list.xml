@@ -17,6 +17,6 @@
 
     <include layout="@layout/item_error" />
 
-    <include layout="@layout/item_error" />
+    <include layout="@layout/circular_progress_bar" />
 
 </LinearLayout>

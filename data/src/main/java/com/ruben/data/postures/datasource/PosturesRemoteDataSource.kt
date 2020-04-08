@@ -16,6 +16,9 @@ class PosturesRemoteDataSource @Inject constructor(
         }
 
     fun getPostureDetail(id: String): Single<PostureDetail> =
-        posturesApi.postureDetail(id = id).map { it.toDomain() }
+        posturesApi.postureDetail(id = id)
+            .flatMap { postureDetailList ->
+                Single.just(postureDetailList.first { it.id == id }.toDomain())
+            }
 
 }

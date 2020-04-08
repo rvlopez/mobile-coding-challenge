@@ -11,7 +11,7 @@ import com.ruben.presentation.posture.entity.PostureUI
 import kotlinx.android.synthetic.main.item_posture.view.*
 
 class PostureListAdapter(
-    val onItemClick: (PostureUI) -> Unit
+    private val onItemClick: (PostureUI) -> Unit
 ) : RecyclerView.Adapter<PosturesViewHolder>() {
 
     private var postureList: MutableList<PostureUI> = mutableListOf()

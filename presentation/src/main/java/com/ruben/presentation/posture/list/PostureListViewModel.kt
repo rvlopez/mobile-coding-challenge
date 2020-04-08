@@ -8,6 +8,7 @@ import com.ruben.presentation.posture.entity.PostureUI
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class PostureListViewModel @Inject constructor(
@@ -26,10 +27,10 @@ class PostureListViewModel @Inject constructor(
             .map { postureList ->
                 postureList.map { PostureMapper().mapToUI(it) }
             }
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { loading(true) }
             .doAfterTerminate { loading(false) }
-            .subscribeOn(Schedulers.io())
             .subscribe({ postureUIList ->
                 _ldPostureList.value = postureUIList
             }, { throwable ->

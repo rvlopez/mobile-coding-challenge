@@ -2,6 +2,7 @@ package com.ruben.presentation.posture.list
 
 import android.os.Bundle
 import android.view.View
+import com.ruben.domain.base.Failure
 import com.ruben.presentation.R
 import com.ruben.presentation.base.fragment.BaseFragment
 import com.ruben.presentation.extensions.gone
@@ -10,9 +11,9 @@ import com.ruben.presentation.extensions.viewModel
 import com.ruben.presentation.extensions.visible
 import com.ruben.presentation.posture.detail.PostureDetailFragment
 import com.ruben.presentation.posture.entity.PostureUI
+import kotlinx.android.synthetic.main.circular_progress_bar.*
 import kotlinx.android.synthetic.main.fragment_posture_list.*
 import kotlinx.android.synthetic.main.item_error.*
-import kotlinx.android.synthetic.main.item_list_shimmer.*
 import kotlinx.android.synthetic.main.item_posture.*
 
 class PostureListFragment : BaseFragment() {
@@ -35,7 +36,6 @@ class PostureListFragment : BaseFragment() {
         setupViewModel()
     }
 
-
     private fun setupRecycler() {
         recyclerView.adapter = postureListAdapter
     }
@@ -45,20 +45,9 @@ class PostureListFragment : BaseFragment() {
 
             observe(ldPostureList, ::addPostures)
 
-            observe(ldLoading) { isLoading ->
-                if (isLoading) {
-                    loadingShimmer.visible()
-                    loadingShimmer.startShimmer()
-                } else {
-                    loadingShimmer.gone()
-                    loadingShimmer.stopShimmer()
-                }
-            }
+            observe(ldLoading, ::loadingUI)
 
-            observe(ldFailure) { failure ->
-                errorLayout.visible()
-                errorMessage.text = failure.message
-            }
+            observe(ldFailure, ::handleFailure)
 
         }
     }
@@ -69,9 +58,28 @@ class PostureListFragment : BaseFragment() {
         postureListAdapter.setPostures(postureList)
     }
 
+    private fun loadingUI(isLoading: Boolean) {
+        if (isLoading) {
+            progressBar.visible()
+        } else {
+            progressBar.gone()
+        }
+    }
+
+    private fun handleFailure(failure: Failure) {
+        when (failure) {
+            is Failure.FailureWithMessage -> {
+                recyclerView.gone()
+                errorLayout.visible()
+                errorMessage.text = failure.msg
+                retryBtn.setOnClickListener { failure.retryAction }
+            }
+        }
+    }
+
     private fun navigateToPostureDetail(posture: PostureUI) {
         pushStack(
-            fragment = PostureDetailFragment.getFragment(posture),
+            fragment = PostureDetailFragment.getFragment(posture.id),
             sharedView = postureImv,
             sharedViewName = getString(R.string.share_name_posture_image)
         )
