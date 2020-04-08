@@ -12,7 +12,9 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
 import com.ruben.presentation.R
+import com.ruben.presentation.base.GlideApp
 
 fun View.gone() {
     visibility = View.GONE

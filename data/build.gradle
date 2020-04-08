@@ -1,3 +1,5 @@
+apply from: '../environments.gradle'
+
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -18,9 +20,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"" + environments.debug.baseURL + "\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", "\"" + environments.release.baseURL + "\""
         }
     }
 
@@ -34,7 +40,6 @@ android {
 
 dependencies {
     // DI
-    api "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
