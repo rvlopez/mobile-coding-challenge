@@ -5,7 +5,7 @@ import com.ruben.data.base.ResponseObject
 import com.ruben.domain.postures.entity.PostureDetail
 
 class PostureDetailResponse(
-    @SerializedName(value = "id") val id: String,
+    @SerializedName(value = "_id") val id: String,
     @SerializedName(value = "name") val name: String,
     @SerializedName(value = "picture") val picture: String,
     @SerializedName(value = "description") val description: String,
