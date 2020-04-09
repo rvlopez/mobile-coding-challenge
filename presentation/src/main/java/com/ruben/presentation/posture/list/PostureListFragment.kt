@@ -72,7 +72,7 @@ class PostureListFragment : BaseFragment() {
                 recyclerView.gone()
                 errorLayout.visible()
                 errorMessage.text = failure.msg
-                retryBtn.setOnClickListener { failure.retryAction }
+                retryBtn.setOnClickListener { failure.retryAction() }
             }
         }
     }

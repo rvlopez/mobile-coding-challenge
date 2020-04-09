@@ -60,6 +60,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include layout="@layout/circular_progress_bar" />
-
 </ScrollView>

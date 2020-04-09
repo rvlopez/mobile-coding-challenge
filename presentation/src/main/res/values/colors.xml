@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">@color/sky_blue</color>
+    <color name="colorPrimaryDark">#25559c</color>
+    <color name="colorAccent">@color/white</color>
+    
     <color name="sky_blue">#1185a6</color>
+    <color name="white">#ffffff</color>
 </resources>

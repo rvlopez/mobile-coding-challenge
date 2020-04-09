@@ -33,14 +33,6 @@ class PostureDetailFragment : BaseFragment() {
 
             observe(ldPostureDetail, ::setupUI)
 
-            observe(ldLoading) { isLoading ->
-
-            }
-
-            observe(ldFailure) {
-
-            }
-
         }
 
     }
