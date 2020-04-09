@@ -18,7 +18,7 @@ Another problem is that Mocky generated endpoints are random strings, so we have
 * MVVM for the presentation layer.
 * Interactors / UseCases are used by the presenters to start a data retrieval flow.
 * UseCases use Repository pattern to request the data needed.
-* Repository have DataSources in order to let the possibility to adddatabase/cache/other sources to retrieve data in the future.
+* Repository have DataSources in order to let the possibility to add database/cache/other sources to retrieve data in the future. Also, the RemoteDataSource is managing the JSON data to filter the list of details selecting the detail matching the id.
 * Three different data objects, DTO (Data transfer object) to parse API's response, Business Object as our own data model and UI data model to populate the views.
 * DI with Dagger2.
 * Asynchronous handled by RxJava2 (RxKotlin).
