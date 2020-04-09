@@ -23,6 +23,7 @@ Another problem is that Mocky generated endpoints are random strings, so we have
 * DI with Dagger2.
 * Asynchronous handled by RxJava2 (RxKotlin).
 * Image loading handled by Gradle. 
+* Unit testing with JUnit and Mockito.
 
 ## Thirtd-Party
 
