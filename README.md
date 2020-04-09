@@ -30,7 +30,7 @@ Another problem is that Mocky generated endpoints are random strings, so we have
 * Dagger 2 https://google.github.io/dagger/
 * Retrofit 2 https://square.github.io/retrofit/
 * OkHttp 3 https://github.com/square/okhttp
-* Picasso http://square.github.io/picasso/
+* Glide https://github.com/bumptech/glide
 * Lottie https://airbnb.design/lottie/
 
 ## Work in progress
