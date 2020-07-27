@@ -10,6 +10,7 @@ import com.ruben.presentation.extensions.*
 import kotlinx.android.synthetic.main.circular_progress_bar.*
 import kotlinx.android.synthetic.main.fragment_posture_detail.*
 import kotlinx.android.synthetic.main.item_error.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class PostureDetailFragment : BaseFragment() {
 
@@ -26,7 +27,12 @@ class PostureDetailFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupListeners()
         setupViewModel()
+    }
+
+    private fun setupListeners() {
+        toolbar.setNavigationOnClickListener { activity?.onBackPressed() }
     }
 
     private fun setupViewModel() {

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">YogaSolo</string>
+
     <string name="share_name_posture_image">postureImv</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="posture_detail_teacher_name">Teacher: %1$s</string>
