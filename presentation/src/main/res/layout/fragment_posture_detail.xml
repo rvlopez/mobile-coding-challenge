@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:id="@+id/containerLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/postureImv"
-            android:layout_width="0dp"
-            android:layout_height="400dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription"
-            tools:src="@drawable/mock_img" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/nameTxv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/postureImv"
-            tools:text="Inversion on block" />
+            <ImageView
+                android:id="@+id/postureImv"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/mock_img" />
 
-        <TextView
-            android:id="@+id/teacherTxv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameTxv"
-            tools:text="Teacher: Hedwig Winter" />
+            <TextView
+                android:id="@+id/nameTxv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/postureImv"
+                tools:text="Inversion on block" />
 
-        <TextView
-            android:id="@+id/descriptionTxv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/teacherTxv"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="Ullamco ut voluptate duis tempor aliqua labore nulla anim incididunt fugiat dolor proident occaecat. In adipisicing qui aliquip reprehenderit ut proident et ea officia do magna. Amet enim consequat quis nisi quis aliquip laboris ipsum non quis. Cupidatat ut laboris sunt fugiat sint.\r\nDuis ut veniam aute elit irure consequat labore duis pariatur tempor amet quis velit. Irure elit cupidatat esse eiusmod cillum excepteur mollit. Deserunt tempor consequat enim enim tempor commodo veniam deserunt quis aliquip quis incididunt reprehenderit. Officia laboris occaecat nisi non non deserunt excepteur. Commodo veniam elit anim sunt minim pariatur ea ad.\r\nDeserunt laborum sit voluptate incididunt sit magna nisi mollit commodo do veniam. Duis dolore irure irure ad duis veniam elit voluptate ipsum sint nulla excepteur cillum. Dolor et incididunt ea voluptate reprehenderit quis ipsum sint ullamco amet excepteur." />
+            <TextView
+                android:id="@+id/teacherTxv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTxv"
+                tools:text="Teacher: Hedwig Winter" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/descriptionTxv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teacherTxv"
+                tools:text="Ullamco ut voluptate duis tempor aliqua labore nulla anim incididunt fugiat dolor proident occaecat. In adipisicing qui aliquip reprehenderit ut proident et ea officia do magna. Amet enim consequat quis nisi quis aliquip laboris ipsum non quis. Cupidatat ut laboris sunt fugiat sint.\r\nDuis ut veniam aute elit irure consequat labore duis pariatur tempor amet quis velit. Irure elit cupidatat esse eiusmod cillum excepteur mollit. Deserunt tempor consequat enim enim tempor commodo veniam deserunt quis aliquip quis incididunt reprehenderit. Officia laboris occaecat nisi non non deserunt excepteur. Commodo veniam elit anim sunt minim pariatur ea ad.\r\nDeserunt laborum sit voluptate incididunt sit magna nisi mollit commodo do veniam. Duis dolore irure irure ad duis veniam elit voluptate ipsum sint nulla excepteur cillum. Dolor et incididunt ea voluptate reprehenderit quis ipsum sint ullamco amet excepteur." />
 
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/item_error" />
+
+    <include layout="@layout/circular_progress_bar" />
+
+</LinearLayout>

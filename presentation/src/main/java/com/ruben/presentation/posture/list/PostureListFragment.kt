@@ -60,6 +60,7 @@ class PostureListFragment : BaseFragment() {
 
     private fun loadingUI(isLoading: Boolean) {
         if (isLoading) {
+            recyclerView.gone()
             progressBar.visible()
         } else {
             progressBar.gone()
