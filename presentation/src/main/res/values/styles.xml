@@ -8,18 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="Widget.Toolbar.Normal" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/colorPrimaryDark</item>
-        <item name="titleTextAppearance">@style/ActionBar.Normal</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">?attr/actionBarSize</item>
-        <item name="android:theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
-    </style>
-
-    <style name="ActionBar.Normal" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
+    <style name="AppBarCollapsed" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">23sp</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>

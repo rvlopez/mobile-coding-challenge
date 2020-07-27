@@ -8,9 +8,9 @@ import com.ruben.presentation.R
 import com.ruben.presentation.base.fragment.BaseFragment
 import com.ruben.presentation.extensions.*
 import kotlinx.android.synthetic.main.circular_progress_bar.*
+import kotlinx.android.synthetic.main.collapsing_toolbar.*
 import kotlinx.android.synthetic.main.fragment_posture_detail.*
 import kotlinx.android.synthetic.main.item_error.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class PostureDetailFragment : BaseFragment() {
 
@@ -54,8 +54,8 @@ class PostureDetailFragment : BaseFragment() {
         errorLayout.gone()
         containerLayout.visible()
         with(postureDetail) {
-            postureImv.load(picture)
-            nameTxv.text = name
+            imageView.load(picture)
+            collapsingToolbarLayout.title = name
             teacherTxv.text = getString(R.string.posture_detail_teacher_name, teacher)
             descriptionTxv.text = description
         }
