@@ -52,6 +52,7 @@ class PostureDetailFragment : BaseFragment() {
 
     private fun setupUI(postureDetail: PostureDetail) {
         errorLayout.gone()
+        appBarLayout.visible()
         containerLayout.visible()
         with(postureDetail) {
             imageView.load(picture)
@@ -63,7 +64,9 @@ class PostureDetailFragment : BaseFragment() {
 
     private fun loadingUI(isLoading: Boolean) {
         if (isLoading) {
+            appBarLayout.gone()
             containerLayout.gone()
+            errorLayout.gone()
             progressBar.visible()
         } else {
             progressBar.gone()
@@ -73,6 +76,7 @@ class PostureDetailFragment : BaseFragment() {
     private fun handleFailure(failure: Failure) {
         when (failure) {
             is Failure.FailureWithMessage -> {
+                appBarLayout.gone()
                 containerLayout.gone()
                 errorLayout.visible()
                 errorMessage.text = failure.msg
